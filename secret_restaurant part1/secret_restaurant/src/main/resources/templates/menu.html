@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SECRET RESTAURANT-マンチカン-</title>
+<meta name="description" content="マスターに招かれた者のみ入店可能">
+<link rel="stylesheet" th:href="@{https://unpkg.com/ress/dist/ress.min.css}">
+<link rel="icon" type="icon/image" th:href="@{/images/cat_with_moon_icon.png}">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div id="menu" class="big-bg">
+	<header class="page-header wrapper">
+		<h1><img class="logo" th:src=@{/images/ロゴ.png} alt="ホームページ"></a></h1>
+	   <nav>
+		   <ul class="main-nav">
+			   <li><a th:href=@{/home}>HOME</a></li>
+			    <li><a th:href=@{/news}>NEWS</a></li>
+			   <li><a th:href=@{/menu}>MENU</a></li>
+			   <li><a th:href=@{/contact}>CONTACT</a></li>
+			   <li sec:authorize="hasAuthority('ADMIN')" class="nav-item">
+				<a th:href="@{/admin/list}" class="nav-link text white">
+				CUSTOMER
+				</a>
+			   </li>
+			    <li><a th:href=@{/profile}>
+				<img th:src=@{/images/profile.png} alt="profile">
+				<br>
+				<td th:text="*{username}"></td></a>
+				</li>
+		   </ul>
+	   </nav>
+	</header>
+	<div class="menu-content wrapper">
+		<p>
+		<strong> 「大切なお客様の笑顔」は「私達の喜び」</strong>
+		<br>雨の日も晴れの日も・・・ちょっと嬉しいことがあった日も気分が落ち込む日も―
+		<br>たとえどのような一日だとしてもお店から帰る時に「今日も良い日だった」と思って頂くためにも心を込めた料理やスイーツ、焼きたてパンやドリンクだけでなく最高のおもてなしご用意してお待ちしてます。
+		</p>
+	</div>
+</div>
+
+<div class="menu-title">
+	<h1>★メニューを選択してください☆</h1>
+	<p>※食材の状況により提供できない場合がございます。予めご了承ください。</p>
+</div>
+
+<div class="wrapper grid">
+	<div class="item">
+		<a th:href="@{/drink}">
+		<img th:src="@{/images/カフェラテ2.jpg}" alt="ドリンク">
+		</a>
+		<p>ドリンク</p>
+	</div>
+	<div class="item">
+		<a th:href="@{/sandwich}">
+		<img th:src="@{/images/ハム卵サンド.jpg}" alt="ハム卵サンド">
+		</a>
+		<p>サンドイッチ/トースト/パン</p>
+	</div>
+	<div class="item">
+		<a th:href="@{/sweets}">
+		<img th:src="@{/images/プリン.jpg}" alt="プリン">
+		</a>
+		<p>スイーツ</p>
+	</div>
+	
+	<div class="item">
+		<a th:href="@{/set}">
+		<img th:src="@{/images/プリントースト+カフェラテ.jpg}" alt="セットメニュー">
+		</a>
+		<p>セットメニュー</p>
+	</div>
+	
+	<div class="item">
+		<a th:href="@{/special}">
+		<img th:src="@{/images/ショートケーキ.jpg}" alt="限定メニュー">
+		</a>
+		<p>期間限定メニュー</p>
+	</div>
+	
+	<div class="item">
+		<a th:href="@{/meal}">
+		<img th:src="@{/images/ミートドリア.jpg}" alt="ミートドリア">
+		</a>
+		<p>ご飯もの</p>
+	</div>
+	
+	<div class="item">
+		<a th:href="@{/breakfast}">
+			<img th:src="@{/images/チーズハムトーストセット.jpg}" alt="チーズハムトーストセット">
+			<p>モーニング(8:00~10:00)</p>
+		</a>
+	</div>	
+</div>
+
+<footer>
+	<div class="wrapper">
+		<p><small>&copy;2023 SECRET RESTAURANT</small></p>
+	</div>
+</footer>
+</body>
+</html>

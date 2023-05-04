@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SECRET RESTAURANT-マンチカン-</title>
+<meta name="description" content="マスターに招かれた者のみ入店可能">
+<link rel="stylesheet" th:href="@{https://unpkg.com/ress/dist/ress.min.css}">
+<link rel="icon" type="icon/image" th:href="@{/images/cat_with_moon_icon.png}">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div id="result" class="big-bg">
+	<header class="page-header wrapper">
+		<h1><img class="logo" th:src=@{/images/ロゴ.png} alt="ホームページ"></a></h1>
+	   <nav>
+		   <ul class="main-nav">
+			    <li><a th:href=@{/home}>HOME</a></li>
+			   <li><a th:href=@{/news}>NEWS</a></li>
+			   <li><a th:href=@{/menu}>MENU</a></li>
+			   <li><a th:href=@{/contact}>CONTACT</a></li>
+		   </ul>
+	   </nav>
+	</header>
+	<div class="result-message">
+		<h1 class="result-message1">【メッセージ送信完了】</h1>
+		<h2 class="result-message1">メッセージありがとうございました。</h2>
+		<p>あなたのご来店を心よりお待ちしております。by SECRET RESTAURANT-マンチカン-<br>
+	    <a th:href=@{/home}>ホーム画面に戻る</a></p>
+	</div>
+	
+	</div>
+</div>
+
+<footer>
+	<div class="wrapper">
+		<p><small>&copy;2023 SECRET RESTAURANT</small></p>
+	</div>
+</footer>
+</body>
+</html>

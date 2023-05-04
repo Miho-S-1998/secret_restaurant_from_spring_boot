@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SECRET RESTAURANT-マンチカン-</title>
+<meta name="description" content="マスターに招かれた者のみ入店可能">
+<link rel="stylesheet" th:href="@{https://unpkg.com/ress/dist/ress.min.css}">
+<link rel="icon" type="icon/image" th:href="@{/images/cat_with_moon_icon.png}">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+	<div id="profile" class="big-bg">
+	<header class="page-header wrapper">
+		<h1><img class="logo" th:src=@{/images/ロゴ.png} alt="ホームページ"></a></h1>
+	   <nav>
+		   <ul class="main-nav">
+			   <li><a th:href=@{/home}>HOME</a></li>
+			   <li><a th:href=@{/news}>NEWS</a></li>
+			   <li><a th:href=@{/menu}>MENU</a></li>
+			   <li><a th:href=@{/contact}>CONTACT</a></li>
+			   <li sec:authorize="hasAuthority('ADMIN')" class="nav-item">
+				<a th:href=@{/admin/list} class="nav-link text white">
+				CUSTOMER
+				</a>
+				</li>
+		   </ul>
+	   </nav>
+	</header>
+	
+	<div class="wrapper">
+		<h2 class="page-title">Profile</h2>
+	</div>
+</div>
+
+<div class="profile-2">
+<p><strong>【プロフィール画面】<br>
+	以下のバーコードをスキャンしてください。</p>
+</p>	</strong>
+</div>
+<br>
+<div class="profile-detail">
+	<ul>
+		<img th:src="@{/images/バーコード.png}" alt="バーコード">
+		<br>
+		名前:<td th:text="*{username}"></td>
+		<br>
+		権限:<td th:text="*{authority}"></td>
+	</ul>
+	<br>
+	<a th:href="@{home}">ホーム画面に戻る</a>
+	</div>
+	<br>
+	
+	
+
+</body>
+</html>

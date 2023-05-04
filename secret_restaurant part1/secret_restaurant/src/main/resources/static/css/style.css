@@ -1,0 +1,452 @@
+@charset "UTF-8";
+/*共通*/
+html{
+	font-size: 100%;
+}
+body{
+	font-family: "Yu Gothic Medium","游ゴシック Medium";
+	line-height: 1.7;
+	color: #432;
+	
+}
+a{
+	text-decoration: none;
+}
+img{
+	max-width: 100%;
+}
+/*header*/
+.logo{
+	width:210px;
+	margin-top:14px ;
+}
+.main-nav{
+	display: flex;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	margin-top: 34px;
+	list-style: none;
+}
+.main-nav li{
+	margin-left: 36px;
+}
+.main-nav a{
+	color: #432;
+}
+.main-nav a:hover{
+	color:#0bd;
+}
+.page-header{
+	display: flex;
+	justify-content: space-between;
+}
+.main-nav img{
+	border-radius: 50%;
+	width:50px;
+	height: 50px;	
+}
+.wrapper{
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;
+}
+/*home*/
+.home-content{
+	text-align: center;
+	margin-top: 10%;
+}
+.home-content p{
+	font-size: 1.125rem;
+	margin-top: 10px 0 42px;
+}
+/*見出し*/
+.page-title{
+	font-size: 3rem;
+	font-family: serif;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+/*ボタン*/
+.button{
+	font-size: 1.375rem;
+	background: #0bd;
+	color: #fff;
+	border-radius: 5px;
+	padding:18px 32px ;
+}
+.button:hover{
+	background: #0090aa;
+}
+.big-bg{
+	background-size: cover;
+	background-position: center top;
+}
+
+#home{
+	background-image: url(../images/真四角プリン.jpg);
+	min-height: 100vh;
+}
+#home .page-title{
+	text-transform: none;
+}
+/*NEWS*/
+#news{
+	background-image: url(../images/ホーム3.jpg);
+	height: 270px;
+	margin-bottom: 40px;
+}
+#news .page-title{
+	text-align: center;
+}
+
+.news-contents{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+/*footer*/
+footer{
+	background: #432;
+	text-align: center;
+	padding: 26px 0;
+}
+footer p{
+	color: #fff;
+	font-size: 0.875rem;
+}
+/*article*/
+article{
+	width: 74%;
+}
+.post-info{
+	position: relative;
+	padding-top: 4px;
+	margin-bottom: 40px;
+}
+.post-date{
+	background: #0bd;
+	border-radius: 50%;
+	color: #fff;
+	width:100px;
+	height: 100px;
+	font-size: 1.625rem;
+	text-align: center;
+	position: absolute;
+	top:0;
+	padding-top: 10px;
+}
+.post-date span{
+	font-size: 1rem;
+	border-top: 1px rgb(255, 255, 255,.5)solid;
+	padding-top: 6px;
+	display: block;
+	width: 60%;
+	margin: 0 auto;
+}
+.post-title{
+	font-family: "Yu Mincho","YuMincho",serif;
+	font-size: 2rem;
+	font-weight: normal;
+}
+.post-title,
+.post-cat{
+	margin-left: 120px;
+}
+/*サイド*/
+aside{
+	width:22%;
+}
+.sub-title{
+	font-size: 1.375rem;
+	padding: 0 8px 8px;
+	border-bottom: 2px #0bd solid;
+	font-weight: normal;
+}
+aside p{
+	padding: 12px 10px;
+}
+.sub-menu{
+	margin-bottom: 60px;
+	list-style: none;
+}
+.sub-menu li{
+	border-bottom: 1px #ddd solid;
+}
+.sub-menu a{
+	color: #432;
+	padding: 10px;
+	display: block;
+}
+.sub-menu a:hover{
+	color: #0bd;
+}
+/*Menu*/
+#menu{
+	background-image: url(../images/menu2.jpg);
+	min-height: 100vh;
+}
+.menu-content{
+	max-width: 560px;
+	margin-top: 10%;
+}
+
+.menu-content p{
+	font-size: 1.4rem;
+	margin-top: 250px;
+}
+.menu-title{
+	text-align: center;
+}
+.menu-title p{
+	text-align: center;
+}
+
+.grid{
+	display: grid;
+	gap:20px;
+	grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+	margin-top: 6%;
+	margin-bottom: 50px;
+}
+/*DRINK*/
+#drink{
+	background-image: url(../images/coffee2.png);
+	height: 270px;
+	margin-bottom: 40px;
+}
+
+#drink .page-title{
+	text-align: center;
+	color:rgb(128, 64, 64);
+}
+
+.drink-title{
+	text-align: center;
+}
+.back{
+	text-align: center;
+}
+/*Sweets*/
+#sweets{
+	background-image: url(../images/sweets.png);
+	height: 270px;
+	margin-bottom: 40px;
+}
+#sweets .page-title{
+	text-align: center;
+}
+.sweets-title{
+	text-align: center;
+}
+/*Sandwich*/
+#bread{
+ background-image: url(../images/bread.png);	
+ height: 270px;
+margin-bottom: 40px;
+ 
+}
+#bread .page-title{
+	text-align: center;
+}
+.bread-title{
+	text-align: center;
+}
+
+#set{
+	background-image: url(../images/セットメニュー.jpg);
+	 height: 270px;
+     margin-bottom: 40px;
+}
+.setmenu-title{
+	text-align: center;
+}
+#set .page-title{
+	text-align: center;
+}
+/*special*/
+.special-title{
+	text-align: center;
+}
+#special{
+	background-image: url(../images/special.jpg);
+	 height: 270px;
+     margin-bottom: 40px;
+}
+#special .page-title{
+	text-align: center;
+}
+/*meal*/
+#meal{
+	background-image: url(../images/ラーメン.jpg);
+	height: 270px;
+	margin-bottom: 40px;
+}
+#meal .page-title{
+	text-align: center;
+}
+.meal-title{
+	text-align: center;
+}
+/*contact*/
+#contact{
+	background-image: url(../images/contact.jpg);
+	min-height: 100vh;
+}
+
+form div{
+	margin-bottom: 14px;
+}
+label{
+	font-size: 1.125rem;
+	margin-bottom: 10px;
+	display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+	background: rgba(255,255,255,.5);
+	border: 1px #fff solid;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 1rem;
+}
+input[type="text"],
+input[type="email"]{
+	width:100%;
+	max-width: 240px;
+}
+textarea{
+	width: 100%;
+	max-width: 480px;
+	height: 6rem;
+}
+input[type="submit"]{
+	border:none;
+	cursor: pointer;
+	line-height: 1;
+}
+
+/*result*/
+#result{
+	background-image: url(../images/contact.jpg);
+	min-height: 100vh;
+	color: rgb(255, 255, 255);
+	background-blend-mode: soft-light;
+}
+
+/*master*/
+#master{
+background-image: url(../images/master.jpg);
+height: 270px;
+margin-bottom: 40px;
+}
+
+#master .page-title{
+	text-align: center;
+}
+#master p{
+	text-align: center;
+}
+.master-contents{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.diary-info{
+	position: relative;
+	padding-top: 4px;
+	margin-bottom: 40px;
+}
+.diary-date{
+	background: #0bd;
+	border-radius: 10%;
+	color: #fff;
+	width: 100px;
+	height: 100px;
+	font-size: 1.625rem;
+	text-align: center;
+	position: absolute;
+	top:0;
+	padding-top: 10px;
+	margin-left: 10px;
+}
+.diary-date span{
+	font-size: 1rem;
+	border-top:1px rgba(255,255,255,.5) solid;
+	padding-top: 6px;
+	display: block;
+	width: 60%;
+	margin:0 auto;
+}
+.diary-title{
+	font-family: "Yu Mincho","YuMincho",serif;
+	font-size: 2rem;
+	font-weight: normal;
+	margin-left: 120px;
+}
+.dairy-title2{
+	margin-left:120px;
+}
+ #master .article img{
+   	margin-bottom: 20px;
+   	min-height: 100px;
+   	padding-left: 20px;
+}
+.box{
+	 padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #00BCD4;
+    background: #e4fcff;/*背景色*/
+    border-top: solid 6px #1dc1d6;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+}
+/*profile*/
+#profile{
+	background-image: url(../images/profile_image.jpg);
+	height: 270px;
+    margin-bottom: 40px;
+}
+
+#profile .page-title{
+	text-align: center;
+}
+
+.profile-2{
+	text-align: center;
+	font-size: 2rem;
+}
+.profile-detail {
+	margin-left: 500px;
+	font-size: 3rem;
+}
+.profile-detail img{
+	margin-left: 0px;
+}
+.profile-detail p{
+	text-align: center;
+}
+
+.profile-detail a{
+	margin-left: 90px;
+}
+
+.profile-infomation{
+	font-size: 2rem;
+	text-align: center;
+}
+.textcenter{
+	background-image: url(../images/ホーム.jpg);
+}
+/*breakfast*/
+#breakfast{
+	background-image: url(../images/breakfast.jpg);
+	height: 270px;
+    margin-bottom: 40px;
+}
+#breakfast .page-title{
+	text-align: center;
+}
+.breakfast-title{
+	text-align: center;
+}

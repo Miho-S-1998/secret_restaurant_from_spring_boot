@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SECRET RESTAURANT-マンチカン-</title>
+<meta name="description" content="マスターに招かれた者のみ入店可能">
+<link rel="stylesheet" th:href="@{https://unpkg.com/ress/dist/ress.min.css}">
+<link rel="icon" type="icon/image" th:href="@{/images/cat_with_moon_icon.png}">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+
+<div id="home" class="big-bg">
+	<header class="page-header wrapper">
+		<h1><img class="logo" th:src=@{/images/ロゴ.png} alt="ホームページ"></a></h1>
+	   <nav>
+		   <ul class="main-nav">
+			   <li><a th:href=@{/news}>NEWS</a></li>
+			   <li><a th:href=@{/menu}>MENU</a></li>
+			   <li><a th:href=@{/contact}>CONTACT</a></li>
+			   <li sec:authorize="hasAuthority('ADMIN')" class="nav-item">
+				<a th:href=@{/admin/list} class="nav-link text white">
+				CUSTOMER
+				</a>
+				</li>
+				<li><a th:href=@{/profile}>
+				<img th:src=@{/images/profile.png} alt="profile">
+				<br>
+				<td th:text="*{username}"></td></a>
+				</li>
+		   </ul>
+	   </nav>
+	</header>
+	
+	<div class="home-content wrapper">
+		<h2 class="page-title">Dear <td th:text="*{username}"></td></h2>
+		<h2 class="page-title">Welocome to SECRET RESTAURANT</h2>
+		<p>-We promice we always make your day special whenever you come-</p>
+		<p>-いつでも私たちは皆様の一日を特別なものにします-</p>
+		<br>
+		<a class="button" th:href=@{/menu}>MENU画面へ</a>
+	</div>
+</div>
+</body>
+</html>

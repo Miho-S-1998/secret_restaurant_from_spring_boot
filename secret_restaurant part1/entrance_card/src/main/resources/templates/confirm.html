@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SECRET RESTAURANT-入店許可証-</title>
+<link rel="stylesheet" th:href="@{https://unpkg.com/ress/dist/ress.min.css}">
+<link rel="icon" type="icon/image" th:href="@{/images/cat_with_moon_icon.png}">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+	<div id="usercard" class="big-bg">
+	<div class="wrapper">
+		<h2 class="page-title">SECRET RESTAURANT-マンチカン-
+			<br>-入店カード-</h2>
+			<br>
+			<div class="infomation">
+			<p>下のバーコードをスキャンしてください。</p>
+			<img th:src="@{/images/バーコード.png}" alt="バーコード">
+			<br>
+		お客様ID:[[${user.id}]]
+		<br>
+		名前:[[${user.name}]]
+		<br>
+		</div>
+		<br>
+		<a th:href=@{/form}>
+		<input type="submit" class="button" value="戻る">
+		</a>
+		<br>
+		</div>
+</div>	
+</body>
+</html>

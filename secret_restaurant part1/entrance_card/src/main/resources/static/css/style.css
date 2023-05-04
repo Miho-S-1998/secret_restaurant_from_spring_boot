@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+html{
+	font-size: 100%;
+}
+body{
+	font-family: "Yu Gothic Medium","游ゴシック Medium";
+	line-height: 1.7;
+	color: #432;
+	
+}
+a{
+	text-decoration: none;
+}
+img{
+	max-width: 100%;
+}
+
+#usercard{
+	background-image: url(../images/profile2.png);
+	background-repeat: repeat;
+	min-height: 100vh;
+}
+#usercard p{
+	text-align: center;
+	font-size: 2rem;
+}
+form div{
+	margin-bottom: 14px;
+}
+label{
+	font-size: 1.5rem /*1.125rem*/;
+	margin-left: 400px;
+	margin-bottom: 10px;
+	display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+	margin-left: 400px;
+	background: rgba(255,255,255,.5);
+	border: 1px #fff solid;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 1rem;
+}
+input[type="text"],
+input[type="email"]{
+	width:100%;
+	max-width: 240px;
+	font-size: 1.5rem;
+}
+input[type="submit"]{
+	margin-left: 400px;
+	font-size: 2rem;
+	border: none;
+	cursor: pointer;
+	line-height: 1;
+}
+.page-title{
+	font-size: 2rem;
+	padding-top: 1px;
+	margin-right: 150px;
+	text-align: center;
+}
+.button{
+	font-size: 1.5rem;
+	background: #0bd;
+	color: #fff;
+	border-radius: 5px;
+	padding: 18px 32px;
+	margin-bottom: 10px;
+}
+.button:hover{
+	background: #0090aa;
+}
+.infomation{
+	font-size: 2.5rem ;
+	margin-left: 400px;
+	margin-bottom: 10px;
+	display: block;	
+}
+.infomation p{
+	margin-right: 500px;
+}
+.infomation img{
+	margin-left:20px;
+}

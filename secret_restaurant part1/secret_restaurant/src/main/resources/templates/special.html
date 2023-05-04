@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SECRET RESTAURANT-マンチカン-</title>
+<meta name="description" content="マスターに招かれた者のみ入店可能">
+<link rel="stylesheet" th:href="@{https://unpkg.com/ress/dist/ress.min.css}">
+<link rel="icon" type="icon/image" th:href="@{/images/cat_with_moon_icon.png}">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+	
+	<div id="special" class="big-bg">
+	<header class="page-header wrapper">
+		<h1><img class="logo" th:src=@{/images/ロゴ.png} alt="ホームページ"></a></h1>
+	   <nav>
+		   <ul class="main-nav">
+			    <li><a th:href=@{/home}>HOME</a></li>
+			    <li><a th:href=@{/news}>NEWS</a></li>
+			   <li><a th:href=@{/menu}>MENU</a></li>
+			   <li><a th:href=@{/contact}>CONTACT</a></li>
+			   <li sec:authorize="hasAuthority('ADMIN')" class="nav-item">
+				<a th:href="@{/admin/list}" class="nav-link text white">
+				CUSTOMER
+				</a>
+		   </ul>
+	   </nav>
+	</header>
+	
+	<div class="wrapper">
+		<h2 class="page-title">Special</h2>	
+	</div>
+	
+</div>
+<div class="special-title">
+		<h1>♢季節ごとに取り扱いが決まっている期間限定メニューです♦</h1>
+	    <h2>★食材が揃えば季節が外れていても提供する可能性もあります★</h2>
+	</div>
+<div class="wrapper grid">
+	
+	<div class="item">
+		<img th:src="@{/images/コロコロスイートポテト.jpg}" alt="コロコロスイートポテト">
+		<p>コロコロスイートポテト \600 (秋-冬)</p>
+	</div>
+	
+	<div class="item">
+		<img th:src="@{/images/スイートポテトパイ.jpg}" alt="スイートポテトパイ">
+		<p>スイートポテトパイ \200(1個）(秋-冬)</p>
+	</div>
+	
+	<div class="item">
+		<img th:src="@{/images/スイートポテト.jpg}" alt="スイートポテト">
+		<p>スイートポテト\500 (秋-冬)</p>
+	</div>
+	
+	<div class="item">
+		<img th:src="@{/images/ショートケーキ.jpg}" alt="ショートケーキ">
+		<p>不思議なショートケーキ \700 (冬-春)</p>
+	</div>
+	
+	<div class="item">
+		<img th:src="@{/images/イチゴミルフィーユ.jpg}" alt="イチゴミルフィーユ">
+		<p>イチゴミルフィーユ \700 (冬-春)</p>
+	</div>
+	
+</div>
+	<div class="back">
+	<a th:href="@{/menu}" >メニュー選択画面へ戻る</a>
+	</div>
+	<br>
+<footer>
+	<div class="wrapper">
+		<p><small>&copy;2023 SECRET RESTAURANT</small></p>
+	</div>
+</footer>	
+
+</body>
+</html>

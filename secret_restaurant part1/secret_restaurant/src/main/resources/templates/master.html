@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SECRET RESTAURANT-マンチカン-</title>
+<meta name="description" content="マスターに招かれた者のみ入店可能">
+<link rel="stylesheet" th:href="@{https://unpkg.com/ress/dist/ress.min.css}">
+<link rel="icon" type="icon/image" th:href="@{/images/cat_with_moon_icon.png}">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div id="master" class="big-bg">
+	<header class="page-header wrapper">
+		<h1><img class="logo" th:src=@{/images/ロゴ.png} alt="ホームページ"></a></h1>
+	   <nav>
+		   <ul class="main-nav">
+	            <li><a th:href=@{/home}>HOME</a></li>
+			    <li><a th:href=@{/news}>NEWS</a></li>
+			   <li><a th:href=@{/menu}>MENU</a></li>
+			   <li><a th:href=@{/contact}>CONTACT</a></li>
+			   <li sec:authorize="hasAuthority('ADMIN')" class="nav-item">
+				<a th:href="@{/admin/list}" class="nav-link text white">
+				CUSTOMER
+				</a>
+				</li>
+				  <li><a th:href=@{/profile}>
+				<img th:src=@{/images/profile.png} alt="profile">
+				<br>
+				<td th:text="*{username}"></td>様</a>
+				</li>	
+		   </ul>
+	   </nav>
+	</header>
+	<div class="wrapper">
+		<h2 class="page-title">Master's Room</h2>
+		<p>-SECRET RESTAURANTの謎多きマスターと仲間たちの日常-</p>
+	</div>
+</div>
+<body>
+	<div class="master-contents wrapper">
+		<article>
+			<header class="diary-info">
+				<h2 class="diary-title">マスターが作っていたものは・・・</h2>
+	            <p class="dairy-title2">綺麗に作るコツは、くるくる巻くだけ？</p>
+				<p class="diary-date">4/30 <span>2023</span></p>
+			</header>
+			<img th:src="@{/images/シュウマイ.jpg}" alt="シュウマイ">
+			<p>皆さん、こんにちは(´▽｀)ノSECRET RESTAURANTの"つみれ"です。<br>
+			至る所でいっぱい咲いていた美しい桜が散り、少しずつ暑さを感じる季節となりました。
+		    実は僕・・・季節の変動に弱くて、この時期になると体調を崩しやすいのです・・・。
+		    今朝、同僚のスルメちゃんに「くれぐれも体調を崩さないでね！」って言われてしまいました(汗)皆さんも気を付けてくださいね！</p>
+		    <br>
+		    <p>さて話は変わりますが、今日お店に来たらマスターが楽しそうに台所で何かを作っていたんです。<br>
+		    こっそり覗いてみると、まな板の上に肉ダネが並べてあって横には皮があったので「餃子ですか？」と
+		    僕が聞いてみたらマスターは一瞬ビクッとした後に振り返って「焼売だよ」って教えてくれました!<br>
+		    この前は餃子を作っていて今回は焼売・・・これじゃレストランより中華料理屋さんって感じです(笑)
+			ちなみに僕も手伝いました！普通は皮に肉ダネを押し込みますが、皮を肉ダネに被せた後にくるくる～と回すと綺麗に巻けるそうです★
+			皆さんも当店に来た際は是非食べてみてくださいね！</p>
+		</article>
+		
+		<aside>
+			<h3 class="sub-title">ログ一覧</h3>
+			<ul class="sub-menu">
+				<li><a th:href="@{#}">まだ4月なのに</a></li>
+				<li><a th:href="@{#}">冬毛から夏毛</a></li>
+				<li><a th:href="@{#}">マスターって？</a></li>
+				<li><a th:href="@{#}">秘密の会合だにゃん</a></li>
+				<li><a th:href="@{/master}">マスターが作っていたものは…</a></li>
+			    <li><a th:href="@{#}">もっと見る</a></li>
+			</ul>
+			 <h3>★コメント欄★</h3>
+            
+			<form th:action="@{/add}" th:object="${comment}" method="post">
+				<div class="box">
+				<label for="content">♢コメント:♢</label>
+				<input type="text"  th:field="*{content}">
+				<button>送信</button>
+				<br>
+				</div>
+				<small style="color: red;" th:errors="*{content}"></small>
+			</form>
+			
+			<br>
+			<h3>コメント一覧</h3>
+			<div th:each="comment:${comments}">
+				<div>[[${comment.id}]]-[[${comment.content}]]</div>
+			</div>
+		</aside>
+	</div>
+<footer>
+	<div class="wrapper">
+		<p><small>&copy;2023 SECRET RESTAURANT</small></p>
+	</div>
+</footer>
+</body>
+</html>

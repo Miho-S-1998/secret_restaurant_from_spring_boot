@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SECRET RESTAURANT-入店カード-</title>
+<link rel="stylesheet" th:href="@{https://unpkg.com/ress/dist/ress.min.css}">
+<link rel="icon" type="icon/image" th:href="@{/images/cat_with_moon_icon.png}">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+	<div id="usercard" class="big-bg">
+	<div class="wrapper">
+		<h2 class="page-title">SECRET RESTAURANT-マンチカン-
+			<br>-入店カード-</h2>
+		<br>
+		<form th:action="@{/confirm}" th:object="${user}" method="post">
+			
+			<div class>
+				<label>お客様ID</label>
+				<input type="text" th:field="*{id}">
+			</div>
+			<div class=>
+				<label for="name">名前</label>
+				<input type="text" th:field="*{name}">
+			</div>
+			<br>
+			<div class="button2">
+			<input type="submit" class="button" value="送信">
+			</div>
+		</form>
+</div>
+	</div>
+</div>
+</body>
+</html>

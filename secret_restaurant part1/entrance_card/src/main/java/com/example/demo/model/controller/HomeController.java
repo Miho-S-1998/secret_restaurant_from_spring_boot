@@ -1,0 +1,27 @@
+package com.example.demo.model.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.example.demo.model.User;
+
+@Controller
+public class HomeController {
+	
+	@GetMapping("/form")
+	private String readForm(@ModelAttribute User user) {
+		 return "form";
+	}
+	
+	@GetMapping("/confirm")
+	private String confirm1(@ModelAttribute User user) {
+		return "confirm";
+	}
+	
+	@PostMapping("/confirm")
+	private String confirm2(@ModelAttribute User user) {
+		return "confirm";
+	}
+}
